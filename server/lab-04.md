@@ -6,7 +6,7 @@
 ## Instructions
 
 1. Install `socket.io-client`
-```
+```console
 npm install socket.io-client --save
 ```
 
