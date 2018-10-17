@@ -10,7 +10,7 @@
 npm install socket.io-client --save
 ```
 
-1. Define `app-client.js` file
+2. Define `app-client.js` file
 
 ```js
 const io = require('socket.io-client');
@@ -35,7 +35,7 @@ socket.emit('message', {
 });
 ```
 
-1. Run Application client
+3. Run Application client
 
 ```console
 node server/app-client.js

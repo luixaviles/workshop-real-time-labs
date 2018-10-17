@@ -14,13 +14,13 @@ export interface Message {
 }
 ```
 
-1. Import `Message` model on `app-server.ts` file.
+2. Import `Message` model on `app-server.ts` file.
 
 ```ts
 import { Message } from './message';
 ```
 
-1. Register a new handler for a `message` event on `app-server.ts` file. The `Socket.IO` instance is ready to listen.
+3. Register a new handler for a `message` event on `app-server.ts` file. The `Socket.IO` instance is ready to listen.
 ```ts
 this.io.on('connect', (socket: SocketIO.Socket) => {
     console.log('Client connected');
@@ -36,7 +36,7 @@ this.io.on('connect', (socket: SocketIO.Socket) => {
 });
 ```
 
-1. Create a `message-generator.ts` file
+4. Create a `message-generator.ts` file
 ```ts
 import { Message } from './message';
 
@@ -62,7 +62,7 @@ export class MessageGenerator {
 }
 ```
 
-1. Create a `MessageGenerator` object and send a random message through existing `socket` every second. Update `listen` function on `app-server.ts` file as follows. Don't forget to import `MessageGenerator` first.
+5. Create a `MessageGenerator` object and send a random message through existing `socket` every second. Update `listen` function on `app-server.ts` file as follows. Don't forget to import `MessageGenerator` first.
 ```ts
 this.io.on('connect', (socket: SocketIO.Socket) => {
     const generator = new MessageGenerator();
@@ -87,4 +87,4 @@ this.io.on('connect', (socket: SocketIO.Socket) => {
 
 ## Next Lab
 
-Create a [Server side client](server/lab-04.md)
+Create a [Server side client](lab-04.md)

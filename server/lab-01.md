@@ -15,26 +15,26 @@ npm install socket.io --save
 npm install @types/socket.io --save-dev
 ```
 
-1. Import `createServer` function, `Server` and `Socket.IO` into `app-server.ts` file.
+2. Import `createServer` function, `Server` and `Socket.IO` into `app-server.ts` file.
 
 ```ts
 import { createServer, Server } from 'http';
 import * as socketIo from 'socket.io';
 ```
 
-1. Add `io` and `server` attributes into `app-server.ts` file.
+3. Add `io` and `server` attributes into `app-server.ts` file.
 
 ```ts
 private io: SocketIO.Server;
 private server: Server;
 ```
 
-1. Create `Server` instance on `constructor`.
+4. Create `Server` instance on `constructor`.
 ```ts
 this.server = createServer(this.app);
 ```
 
-1. Create `Socket.IO` instance on `constructor` using `Server` object.
+5. Create `Socket.IO` instance on `constructor` using `Server` object.
 ```ts
 this.io = socketIo(this.server);
 ```

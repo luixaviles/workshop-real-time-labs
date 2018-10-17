@@ -14,7 +14,7 @@ public listen() {
 }
 ```
 
-1. Add `connect` *event* handler. This will be fired upon a _connection_ from client.
+2. Add `connect` *event* handler. This will be fired upon a _connection_ from client.
 
 ```ts
 public listen() {
@@ -28,7 +28,7 @@ public listen() {
 }
 ```
 
-1. Add `disconnect` *event* handler. This will be fired upon _disconnection_.
+3. Add `disconnect` *event* handler. This will be fired upon _disconnection_.
 ```ts
 }
 
