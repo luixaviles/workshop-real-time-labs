@@ -19,7 +19,7 @@ public listen() {
 ```ts
 public listen() {
     this.server.listen(this.port, () => {
-        console.log(`Running server on port ${this.port}. Open http://localhost:3000`);
+        console.log(`Running server on port ${this.port}`);
     });
 
     this.io.on('connect', (socket: SocketIO.Socket) => {
@@ -34,7 +34,7 @@ public listen() {
 
 public listen() {
     this.server.listen(this.port, () => {
-        console.log(`Running server on port ${this.port}. Open http://localhost:3000`);
+        console.log(`Running server on port ${this.port}`);
     });
 
     this.io.on('connect', (socket: SocketIO.Socket) => {
