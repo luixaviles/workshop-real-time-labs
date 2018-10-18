@@ -20,6 +20,8 @@ import * as socketIo from 'socket.io-client';
 ```
 
 ```ts
+private socket;
+
 constructor() {
     this.socket = socketIo('http://localhost:3000');
 }
