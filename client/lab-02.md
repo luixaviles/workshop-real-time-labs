@@ -6,6 +6,7 @@
 
 1. Install `socket.io-client`
 ```console
+npm install socket.io-client --save
 npm install @types/socket.io-client --save-dev
 ```
 
