@@ -28,7 +28,30 @@ onSendMessage(message: string) {
       from: 'client',
       content: message
     });
+    this.message = null;
 }
+```
+
+4. Import `FormsModule` into `app.module.ts` file
+```ts
+import { FormsModule } from '@angular/forms';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    MessagesComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    SharedModule,
+    BrowserAnimationsModule,
+    FormsModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
 ```
 
 Is there any way to have the same message back from the server in order to display it as part of the list?
